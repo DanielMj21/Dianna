@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+   }
+  
+  body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:black;
+   }
+     
+   .login-box{
+     position:relative;
+     width:400px;
+     /*background:red;*/
+   }
+   
+   .login-box form{
+     width:100%;
+     padding:0 50px;
+   }
+   
+   h2{
+     font-size:2em;
+     color: hotpink;
+     text-align:center;
+   }
+   
+   .input-box{
+     position:relative;
+     margin:30px 0;
+   }
+   
+   .input-box input{
+     width:100%;
+     height:50px;
+     background:transparent;
+     border:2px solid silver#2c4766;
+     outline:none;
+     border-radius:40px;
+     font-size:1em;
+     color:white;
+     padding:0 20px;
+     transition:.5s ease;
+   }
+   
+   .input-box input:focus,
+   .input-box input:valid{
+     border-color: deeppink;
+   }
+   
+   .input-box label{
+     position:absolute;
+     top:50%;
+     left:20px;
+     transform:translateY(-50%);
+     font-size:1em;
+     color:white;
+     pointer-events:none;
+     transition: .5s ease;
+   }
+   
+   .input-box input:focus~label,
+   .input-box input:valid~label{
+     top:1px;
+     font-size:1em;
+     background:black;
+     padding:0 6px;
+     color: deeppink;
+   }
+   
+   .forgot-pass{
+     margin:-15px 0 10px;
+     text-align:center;
+   }
+   
+   .forgot-pass a{
+     font-size: 1em;
+     color: violet;
+     text-decoration:none;
+   }
+   
+   .forgot-pass a:hover{
+     text-decoration:underline;
+   }
+   
+   .btn{
+     width:100%;
+     height:45px;
+     background: hotpink;
+     border:none;
+     outline:none;
+     border-radius:40px;
+     cursor:pointer;
+     font-size:1em;
+     color:black;
+     font-weight:600;
+   }
+   
+   .signup-link{
+     margin:20px 0 10px;
+     text-align:center;
+   }
+   
+   .signup-link a{
+     font-size:1em;
+     color: violet:
+     text-decoration:none;
+     font-weight:600;
+   }
+  
+   .signup-link a:hover{
+     text-decoration:underline;
+   }
+    </style>
+</head>
+
+<body>
+<div class="login-box">
+  <h2>Login</h2>
+   <form id="form" action="aboutme.html" method="get">
+
+   <div class="input-box">
+     <input id="email" type="email" required>
+     <label>Email</label>
+   </div>
+   <div class="input-box">
+      <input id="password" type="password" required>
+      <label>Password</label>
+   </div>
+   <div class="forgot-pass">
+        <a href="#">Forgot your password?</a>
+   </div>
+   <button type="sumbit" class="btn">Login</button>
+   </div> 
+   </form>
+</div>
+   </form>
+</div>
+
+
+
+</div>
+<script>
+    const email = document.getElementById('email')
+    const password = document.getElementById('password')
+    const form = document.getElementById('form')
+
+    form.addEventListener('submit', (e) => {
+      let messages = []
+      if (password.value !== 'dayandayan') {
+      alert("invalid password!");
+      e.preventDefault()
+      errorElement.innerText = messages.join(', ')
+    }
+
+      if (email.value !== 'LabradorDiannaRose@gmail.com') {
+      alert("invalid email!");
+      e.preventDefault()
+      errorElement.innerText = messages.join(', ')
+    }
+    })
+  </script>
+</body> 
+</html>
